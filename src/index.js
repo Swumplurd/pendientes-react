@@ -6,13 +6,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import { TodoApp } from "./components/TodoApp/TodoApp";
 
-ReactDOM.render(
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <TodoApp />
-            </div>
-        </div>
-    </div>,
-    document.getElementById("root")
-);
+document.body.className = "bg-dark bg-gradient text-light";
+document.body.style = "min-height: 100vh";
+
+ReactDOM.render(<TodoApp />, document.getElementById("root"));
