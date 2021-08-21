@@ -66,6 +66,19 @@ export const TodoApp = () => {
         reset();
     };
 
+    let dones = 0;
+    for (let i = 0; i < todos.length; i++) {
+        if (todos[i].done) {
+            dones++;
+        }
+    }
+
+    let pors = (dones * 100) / todos.length;
+
+    const style = {
+        width: `${parseInt(pors)}%`
+    };
+
     return (
         <>
             <TodoHeader />
@@ -95,6 +108,11 @@ export const TodoApp = () => {
                     <div className="col-lg-8 col-md col-sm-12">
                         <TodoList todos={todos} handleDelete={handleDelete} handleToggle={handleToggle} />
                     </div>
+                </div>
+            </div>
+            <div className="progress fixed-bottom">
+                <div className="progress-bar progress-bar-striped bg-info text-dark" role="progressbar" style={style} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    {parseInt(pors)}%
                 </div>
             </div>
         </>
