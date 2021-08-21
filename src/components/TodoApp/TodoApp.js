@@ -4,6 +4,7 @@ import { useForm } from "../../hooks/useForm";
 import { todoReducer } from "./todoReducer";
 
 import { TodoList } from "../TodoList/TodoList";
+import { TodoHeader } from "../TodoHeader/TodoHeader";
 
 const init = () => {
     /* return [
@@ -67,21 +68,7 @@ export const TodoApp = () => {
 
     return (
         <>
-            <div className="container-fluid mb-5 shadow-lg">
-                <div className="row">
-                    <div className="col px-0">
-                        <div className="bg-dark text-secondary px-4 py-5 text-center">
-                            <div className="py-5">
-                                <h1 className="display-5 fw-bold text-white">Lista de Tareas</h1>
-                                <div className="col-lg-6 mx-auto">
-                                    <p className="fs-5 mb-4">Añade tu lista de tareas y guardalas en tu navegador. Asegurate de no borrar los datos de navegacion para no perder tus tareas.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <TodoHeader />
             <div className="container">
                 <div className="row">
                     <div className="col-lg-4 col-md-12 col-sm-12">
