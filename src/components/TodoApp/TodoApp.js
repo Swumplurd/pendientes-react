@@ -111,8 +111,8 @@ export const TodoApp = () => {
                 </div>
             </div>
             <div className="progress fixed-bottom">
-                <div className="progress-bar progress-bar-striped bg-info text-dark" role="progressbar" style={style} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                    {parseInt(pors)}%
+                <div className="progress-bar progress-bar-striped bg-info progress-bar-animated text-dark" role="progressbar" style={style} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    {parseInt(pors) || ''}%
                 </div>
             </div>
         </>
